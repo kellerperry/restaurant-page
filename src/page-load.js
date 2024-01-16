@@ -1,24 +1,6 @@
 import loadHome from "./home";
-
+import loadMenu from "./menu";
 import loadContact from "./contact";
-
-
-function loadTab (event) {
-    if(event.target)
-
-    setActiveTab(event.target);
-
-    if (event.target.textContent.contains('Home')) {
-        loadHome();
-        return;
-    } else if (event.target.textContent.contains('Menu')) {
-        loadMenu();
-        return;
-    } else if (event.target.textContent.contains("Contact")) {
-        loadContact();
-        return;
-    }
-}
 
 
 function renderNav () {
@@ -28,21 +10,28 @@ function renderNav () {
     const menuBtn = document.createElement('button');
     const contactBtn = document.createElement('button');
 
+    homeBtn.classList.add("tabs")
+    menuBtn.classList.add("tabs")
+    contactBtn.classList.add("tabs")
+
     homeBtn.textContent = "Home";
     menuBtn.textContent = "Menu";
     contactBtn.textContent = "Contact";
     
     homeBtn.addEventListener('click',(e) => {
-        setActiveTab(e.target);
-        loadTab(e);
+        if(e.target.classList.contains('active')) return;
+        setActiveTab(homeBtn);
+        loadHome();
     });
     menuBtn.addEventListener('click', (e) => {
-        setActiveTab(e.target);
-        loadTab(e);
+        if(e.target.classList.contains('active')) return;
+        setActiveTab(menuBtn);
+        loadMenu();
     });
     contactBtn.addEventListener('click', (e) => {
-        setActiveTab(e.target);
-        loadTab(e);
+        if(e.target.classList.contains('active')) return;
+        setActiveTab(contactBtn);
+        loadContact();
     });
     
     nav.appendChild(homeBtn);
@@ -75,6 +64,8 @@ function initializePage() {
     
    content.appendChild(renderNav());
    content.appendChild(renderMain());
+
+   setActiveTab(document.querySelector(".tabs"));
    loadHome();
 }
 
