@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-img {
+    max-width: 300px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#nav {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly
+}   
+
+.contact-card {
+    border: 3px solid navy;
+    max-width: 300px;
+    margin: 20px;
+    padding: 30px;
+}
+
+.icon {
+    max-width: 40px;
+    margin: 10px;
+}
