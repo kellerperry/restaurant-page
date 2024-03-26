@@ -45,6 +45,7 @@ function createParagraph(text) {
 function renderMenuPage() {
     const menuNav = document.createElement('div');
     menuNav.setAttribute('id', 'menu-nav');
+    
     const menu = document.createElement('div');
     menu.setAttribute('id', 'menu-div');
     

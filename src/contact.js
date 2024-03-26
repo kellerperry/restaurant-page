@@ -10,7 +10,7 @@ function reservationCard() {
 
         cardHeader.textContent = 'Make a Reservation';
         contactEmail.textContent = 'goodclean@bun.com';
-        phoneNumber.textContent = '(555)555-4806';
+        phoneNumber.textContent = '(555) 555-4806';
 
 
         contactCard.appendChild(cardHeader)
@@ -37,7 +37,7 @@ function stayConnectedCard () {
         findUs.textContent = 'Find us on Instagram and Facebook';
 
         instaIcon.setAttribute('src','/src/assets/instagram-icon.svg' );
-        fbIcon.setAttribute('src', '/src/assets/facebook-icon.svg')
+        fbIcon.setAttribute('src', '/src/assets/facebook-icon.png')
 
         instaIcon.classList.add('icon');
         fbIcon.classList.add('icon');
@@ -55,8 +55,9 @@ function loadContact () {
     const main = document.getElementById('main');
     main.textContent = "";
     
-    main.appendChild(stayConnectedCard());
     main.appendChild(reservationCard());
+    main.appendChild(stayConnectedCard());
+    
 }
 
 export default loadContact;

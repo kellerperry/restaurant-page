@@ -17,7 +17,7 @@ function createHomePage () {
     imgCaption.innerHTML = `Photo by <a href="https://unsplash.com/@lienvanwin?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Lien Van Win</a> on <a href="https://unsplash.com/photos/brown-wooden-table-and-chairs-set-N4nLjqS2umE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>`;
 
     rest_descript.textContent = 'Modern culinary bistro and bakery';
-    awardLine.textContent = 'James Bear Award Winning Restaurant';
+    awardLine.textContent = 'James Bear Award Winning';
 
     home.appendChild(headline)
     home.appendChild(heroImg)
