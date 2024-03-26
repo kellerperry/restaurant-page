@@ -36,7 +36,7 @@ function stayConnectedCard () {
         cardHeader.textContent = 'Stay Connected';
         findUs.textContent = 'Find us on Instagram and Facebook';
 
-        instaIcon.setAttribute('src','/src/assets/instagram-icon.svg' );
+        instaIcon.setAttribute('src','/src/assets/Instagram_Glyph_Gradient.png');
         fbIcon.setAttribute('src', '/src/assets/facebook-icon.png')
 
         instaIcon.classList.add('icon');
